@@ -29,7 +29,6 @@ const Container = () => {
     [layout]
   );
 
-  // handleDrop is use only for dropping sidebar items into columns
   const handleDrop = useCallback(
     (dropZone, item) => {
       console.log('dropZone', dropZone)
