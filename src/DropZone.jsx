@@ -42,7 +42,7 @@ const DropZone = ({ data, onDrop, isLast, className }) => {
       const parentDropInChild = splitItemPath.length < splitDropZonePath.length;
       if (parentDropInChild) return false;
 
-      // Current item can't possible moce to it's own location
+      // Current item can't possible move to it's own location
       if (itemPath === dropZonePath) return false;
 
       // Current area
