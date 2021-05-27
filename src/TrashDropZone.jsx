@@ -16,7 +16,8 @@ const TrashDropZone = ({ data, onDrop }) => {
       const itemPath = item.path;
       const splitItemPath = itemPath.split("-");
       const itemPathRowIndex = splitItemPath[0];
-      const itemRowChildrenLength = layout[itemPathRowIndex].children.length;
+      const itemRowChildrenLength =
+        layout[itemPathRowIndex] && layout[itemPathRowIndex].children.length;
 
       // prevent removing a col when row has only one col
       if (
@@ -29,7 +30,7 @@ const TrashDropZone = ({ data, onDrop }) => {
 
       return true;
     },
-    collect: monitor => ({
+    collect: (monitor) => ({
       isOver: monitor.isOver(),
       canDrop: monitor.canDrop()
     })
