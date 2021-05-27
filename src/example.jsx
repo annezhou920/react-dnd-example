@@ -104,7 +104,7 @@ const Container = () => {
         )
       );
     },
-    [layout]
+    [layout, components]
   );
 
   const renderRow = (row, currentPath) => {
