@@ -29,7 +29,6 @@ const Column = ({ data, components, handleDrop, path }) => {
         key={component.id}
         data={component}
         components={components}
-        handleDrop={handleDrop}
         path={currentPath}
       />
     );
