@@ -160,8 +160,7 @@ const Container = () => {
 
         <TrashDropZone
           data={{
-            path: `${layout.length}`,
-            childrenCount: layout.length
+            layout
           }}
           onDrop={handleDropToTrashBin}
         />
