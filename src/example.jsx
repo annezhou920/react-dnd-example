@@ -1,8 +1,8 @@
 import React, { useState, useCallback } from "react";
 
 import DropZone from "./DropZone";
-import TrashDropZone from "./TrashDropZone";
-import SideBarItem from "./SideBarItem";
+// import TrashDropZone from "./TrashDropZone";
+// import SideBarItem from "./SideBarItem";
 import Row from "./Row";
 import initialData from "./initial-data";
 import {
@@ -31,8 +31,8 @@ const Container = () => {
 
   const handleDrop = useCallback(
     (dropZone, item) => {
-      console.log('dropZone', dropZone)
-      console.log('item', item)
+      console.log("dropZone", dropZone);
+      console.log("item", item);
 
       const splitDropZonePath = dropZone.path.split("-");
       const pathToDropZone = splitDropZonePath.slice(0, -1).join("-");
@@ -124,9 +124,9 @@ const Container = () => {
   return (
     <div className="body">
       <div className="sideBar">
-        {Object.values(SIDEBAR_ITEMS).map((sideBarItem, index) => (
+        {/* {Object.values(SIDEBAR_ITEMS).map((sideBarItem, index) => (
           <SideBarItem key={sideBarItem.id} data={sideBarItem} />
-        ))}
+        ))} */}
       </div>
       <div className="pageContainer">
         <div className="page">
@@ -157,12 +157,12 @@ const Container = () => {
           />
         </div>
 
-        <TrashDropZone
+        {/* <TrashDropZone
           data={{
             layout
           }}
           onDrop={handleDropToTrashBin}
-        />
+        /> */}
       </div>
     </div>
   );
